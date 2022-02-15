@@ -61,6 +61,8 @@ namespace BOA_CLOTHING.Formularios
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.panelVentas = new System.Windows.Forms.Panel();
+            this.btnSalirVentas = new System.Windows.Forms.PictureBox();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -76,6 +78,9 @@ namespace BOA_CLOTHING.Formularios
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelContenedor.SuspendLayout();
+            this.panelVentas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalirVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitulo
@@ -403,6 +408,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnVentas
             // 
+            this.btnVentas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnVentas.FlatAppearance.BorderSize = 0;
             this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -416,6 +422,7 @@ namespace BOA_CLOTHING.Formularios
             this.btnVentas.TabIndex = 1;
             this.btnVentas.Text = "Nueva Venta";
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // pictureBox1
             // 
@@ -430,11 +437,35 @@ namespace BOA_CLOTHING.Formularios
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
+            this.panelContenedor.Controls.Add(this.panelVentas);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(220, 35);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1080, 615);
             this.panelContenedor.TabIndex = 2;
+            // 
+            // panelVentas
+            // 
+            this.panelVentas.BackColor = System.Drawing.Color.White;
+            this.panelVentas.Controls.Add(this.btnSalirVentas);
+            this.panelVentas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelVentas.Location = new System.Drawing.Point(0, 0);
+            this.panelVentas.Name = "panelVentas";
+            this.panelVentas.Size = new System.Drawing.Size(1080, 615);
+            this.panelVentas.TabIndex = 0;
+            this.panelVentas.Visible = false;
+            // 
+            // btnSalirVentas
+            // 
+            this.btnSalirVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnSalirVentas.Image")));
+            this.btnSalirVentas.Location = new System.Drawing.Point(1021, 562);
+            this.btnSalirVentas.Name = "btnSalirVentas";
+            this.btnSalirVentas.Size = new System.Drawing.Size(46, 41);
+            this.btnSalirVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSalirVentas.TabIndex = 0;
+            this.btnSalirVentas.TabStop = false;
+            this.btnSalirVentas.Click += new System.EventHandler(this.btnSalirVentas_Click);
             // 
             // FrmHome
             // 
@@ -462,6 +493,9 @@ namespace BOA_CLOTHING.Formularios
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelContenedor.ResumeLayout(false);
+            this.panelVentas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalirVentas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -499,5 +533,7 @@ namespace BOA_CLOTHING.Formularios
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnMercancias;
         private System.Windows.Forms.PictureBox btnOff;
+        private System.Windows.Forms.Panel panelVentas;
+        private System.Windows.Forms.PictureBox btnSalirVentas;
     }
 }

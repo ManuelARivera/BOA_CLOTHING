@@ -45,5 +45,20 @@ namespace BOA_CLOTHING.Formularios
         {
             Application.Exit();
         }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+
+            //btnVentas.ForeColor = Color.FromArgb(52, 73, 94);
+            panelVentas.Visible = true;
+            MenuVertical.Enabled = false;
+        }
+
+        private void btnSalirVentas_Click( object sender, EventArgs e)
+        {
+            //btnVentas.ForeColor = Color.White;
+            panelVentas.Visible = false;
+            MenuVertical.Enabled = true;
+        }
     }
 }
