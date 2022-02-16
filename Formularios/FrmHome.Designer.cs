@@ -35,8 +35,10 @@ namespace BOA_CLOTHING.Formularios
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelContenedorColor = new System.Windows.Forms.Panel();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.panelMercancias = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnOff = new System.Windows.Forms.PictureBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -61,14 +63,14 @@ namespace BOA_CLOTHING.Formularios
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panelVentas = new System.Windows.Forms.Panel();
-            this.btnSalirVentas = new System.Windows.Forms.PictureBox();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.MenuVertical.SuspendLayout();
+            this.panelMercancias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOff)).BeginInit();
             this.panel14.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -78,9 +80,6 @@ namespace BOA_CLOTHING.Formularios
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelContenedor.SuspendLayout();
-            this.panelVentas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalirVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitulo
@@ -90,7 +89,7 @@ namespace BOA_CLOTHING.Formularios
             this.panelTitulo.Controls.Add(this.btnMinimizar);
             this.panelTitulo.Controls.Add(this.btnMaximizar);
             this.panelTitulo.Controls.Add(this.btnCerrar);
-            this.panelTitulo.Controls.Add(this.panel2);
+            this.panelTitulo.Controls.Add(this.panelContenedorColor);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
@@ -146,17 +145,18 @@ namespace BOA_CLOTHING.Formularios
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // panel2
+            // panelContenedorColor
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 35);
-            this.panel2.TabIndex = 2;
+            this.panelContenedorColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
+            this.panelContenedorColor.Location = new System.Drawing.Point(0, 0);
+            this.panelContenedorColor.Name = "panelContenedorColor";
+            this.panelContenedorColor.Size = new System.Drawing.Size(220, 35);
+            this.panelContenedorColor.TabIndex = 2;
             // 
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.MenuVertical.Controls.Add(this.panelMercancias);
             this.MenuVertical.Controls.Add(this.btnOff);
             this.MenuVertical.Controls.Add(this.panel14);
             this.MenuVertical.Controls.Add(this.btnReportes);
@@ -178,6 +178,26 @@ namespace BOA_CLOTHING.Formularios
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(220, 615);
             this.MenuVertical.TabIndex = 1;
+            // 
+            // panelMercancias
+            // 
+            this.panelMercancias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(241)))));
+            this.panelMercancias.Controls.Add(this.pictureBox2);
+            this.panelMercancias.Location = new System.Drawing.Point(220, 156);
+            this.panelMercancias.Name = "panelMercancias";
+            this.panelMercancias.Size = new System.Drawing.Size(36, 32);
+            this.panelMercancias.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-20, 562);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(46, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // btnOff
             // 
@@ -210,6 +230,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnReportes
             // 
+            this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -243,6 +264,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnMatenimiento
             // 
+            this.btnMatenimiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnMatenimiento.FlatAppearance.BorderSize = 0;
             this.btnMatenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
             this.btnMatenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -276,6 +298,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnClientes
             // 
+            this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -309,6 +332,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnEmpleados
             // 
+            this.btnEmpleados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnEmpleados.FlatAppearance.BorderSize = 0;
             this.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
             this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -342,6 +366,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnCompras
             // 
+            this.btnCompras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnCompras.FlatAppearance.BorderSize = 0;
             this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -375,6 +400,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnMercancias
             // 
+            this.btnMercancias.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnMercancias.FlatAppearance.BorderSize = 0;
             this.btnMercancias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
             this.btnMercancias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -422,7 +448,6 @@ namespace BOA_CLOTHING.Formularios
             this.btnVentas.TabIndex = 1;
             this.btnVentas.Text = "Nueva Venta";
             this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // pictureBox1
             // 
@@ -437,35 +462,11 @@ namespace BOA_CLOTHING.Formularios
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
-            this.panelContenedor.Controls.Add(this.panelVentas);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(220, 35);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1080, 615);
             this.panelContenedor.TabIndex = 2;
-            // 
-            // panelVentas
-            // 
-            this.panelVentas.BackColor = System.Drawing.Color.White;
-            this.panelVentas.Controls.Add(this.btnSalirVentas);
-            this.panelVentas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelVentas.Location = new System.Drawing.Point(0, 0);
-            this.panelVentas.Name = "panelVentas";
-            this.panelVentas.Size = new System.Drawing.Size(1080, 615);
-            this.panelVentas.TabIndex = 0;
-            this.panelVentas.Visible = false;
-            // 
-            // btnSalirVentas
-            // 
-            this.btnSalirVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnSalirVentas.Image")));
-            this.btnSalirVentas.Location = new System.Drawing.Point(1021, 562);
-            this.btnSalirVentas.Name = "btnSalirVentas";
-            this.btnSalirVentas.Size = new System.Drawing.Size(46, 41);
-            this.btnSalirVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSalirVentas.TabIndex = 0;
-            this.btnSalirVentas.TabStop = false;
-            this.btnSalirVentas.Click += new System.EventHandler(this.btnSalirVentas_Click);
             // 
             // FrmHome
             // 
@@ -484,6 +485,8 @@ namespace BOA_CLOTHING.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.MenuVertical.ResumeLayout(false);
+            this.panelMercancias.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOff)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -493,9 +496,6 @@ namespace BOA_CLOTHING.Formularios
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelContenedor.ResumeLayout(false);
-            this.panelVentas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalirVentas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,7 +506,7 @@ namespace BOA_CLOTHING.Formularios
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelContenedorColor;
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.PictureBox btnRestaurar;
@@ -533,7 +533,7 @@ namespace BOA_CLOTHING.Formularios
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnMercancias;
         private System.Windows.Forms.PictureBox btnOff;
-        private System.Windows.Forms.Panel panelVentas;
-        private System.Windows.Forms.PictureBox btnSalirVentas;
+        private System.Windows.Forms.Panel panelMercancias;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -45,20 +45,21 @@ namespace BOA_CLOTHING.Formularios
         {
             Application.Exit();
         }
-
-        private void btnVentas_Click(object sender, EventArgs e)
+        private void AbrirFrmHija(object frmhija)
         {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
 
-            //btnVentas.ForeColor = Color.FromArgb(52, 73, 94);
-            panelVentas.Visible = true;
             MenuVertical.Enabled = false;
-        }
 
-        private void btnSalirVentas_Click( object sender, EventArgs e)
-        {
-            //btnVentas.ForeColor = Color.White;
-            panelVentas.Visible = false;
-            MenuVertical.Enabled = true;
+            Form fh = frmhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+            
         }
+     
     }
 }
