@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using BOA_CLOTHING.Entidades;
 
 namespace BOA_CLOTHING.Formularios
 {
@@ -82,6 +83,11 @@ namespace BOA_CLOTHING.Formularios
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FLogin.ConsultarLogin(txtUser.Text, txtPass.Text);
         }
     }
 }

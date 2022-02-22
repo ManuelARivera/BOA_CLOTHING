@@ -17,6 +17,8 @@ namespace BOA_CLOTHING.Formularios
         {
             InitializeComponent();
         }
+        int cMantenimiento = 1;
+        int cReporte = 1;
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -52,75 +54,95 @@ namespace BOA_CLOTHING.Formularios
             Application.Exit();
         }
 
-        //Metodo para abrir los formularios Hijas en el panelContenedor
-        //Primero verifica si tiene algun controls y en caso de que lo tenga, procede a eliminar
-        //Se crea la instancia del formulario hija pasada por parametro la cual llamaremos fh y terminando mostandola
+        
         private void AbrirFrmHija(object frmhija)
         {
-            if (panelContenedor.Controls.Count > 0)
-                panelContenedor.Controls.RemoveAt(0);
-
-
-            Form fh = frmhija as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            panelContenedor.Controls.Add(fh);
-            panelContenedor.Tag = fh;
-            fh.Show();
-           
-
+            Form fh = frmhija as Form;        
+            fh.ShowDialog();
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            AbrirFrmHija(new FrmNuevaVenta());
-        }
+        private void btnVentas_Click(object sender, EventArgs e) { AbrirFrmHija(new FrmNuevaVenta()); }
 
-        private void btnMercancias_Click(object sender, EventArgs e)
-        {
-            AbrirFrmHija(new FrmMercancia());
-        }
+        private void btnMercancias_Click(object sender, EventArgs e) { AbrirFrmHija(new FrmMercancia()); }
 
-        private void btnCompras_Click(object sender, EventArgs e)
-        {
-            AbrirFrmHija(new FrmCompra());
-        }
+        private void btnCompras_Click(object sender, EventArgs e) { AbrirFrmHija(new FrmCompra()); }
 
-        private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-            AbrirFrmHija(new FrmEmpleado());
-        }
+        private void btnEmpleados_Click(object sender, EventArgs e) { AbrirFrmHija(new FrmEmpleado()); }
 
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            AbrirFrmHija(new FrmCliente());
-        }
-
-        private void btnMatenimiento_Click(object sender, EventArgs e)
-        {
-            AbrirFrmHija(new FrmMantenimiento());
-        }
-
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-           
-        }
+        private void btnClientes_Click(object sender, EventArgs e) { AbrirFrmHija(new FrmCliente()); }
 
         private void panelTitulo_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void panelContenedor_MouseDown(object sender, MouseEventArgs e)
+        private void panelTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void panelTitulo_MouseDown(object sender, MouseEventArgs e)
+        private void horaFecha_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text = DateTime.Now.ToLongTimeString();
+            lbFecha.Text = DateTime.Now.ToLongDateString();
+
+        }
+
+        private void panelContenedorColor_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnMatenimiento_Click(object sender, EventArgs e)
+        {
+            panelSubmenuManteimiento.Visible = true;
+        }
+
+        private void btnM_Empleado_Click(object sender, EventArgs e)
+        {
+            panelSubmenuManteimiento.Visible = false;
+        }
+
+        private void btnM_Cliente_Click(object sender, EventArgs e)
+        {
+            panelSubmenuManteimiento.Visible = false;
+        }
+
+        private void btnM_Mercancia_Click(object sender, EventArgs e)
+        {
+            panelSubmenuManteimiento.Visible = false;
+        }
+
+        private void btnM_Facturas_Click(object sender, EventArgs e)
+        {
+            panelSubmenuManteimiento.Visible = false;
+        } 
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            panelSubmenuManteimiento.Visible = false;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            panelSubmenuReportes.Visible = false;
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            panelSubmenuReportes.Visible = true;
+        }
+
+        private void btnR_Ventas_Click(object sender, EventArgs e)
+        {
+            panelSubmenuReportes.Visible = false;
+        }
+
+        private void btnR_StockProducto_Click(object sender, EventArgs e)
+        {
+            panelSubmenuReportes.Visible = false;
         }
     }
 }

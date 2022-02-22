@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace BOA_CLOTHING.Formularios
 {
-    public partial class FrmNuevaVenta : Form
+    public partial class FrmMatenimientoEmpleado : Form
     {
-        public FrmNuevaVenta()
+        public FrmMatenimientoEmpleado()
         {
             InitializeComponent();
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Close();
-            
         }
     }
 }
