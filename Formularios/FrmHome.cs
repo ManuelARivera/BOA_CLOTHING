@@ -17,8 +17,6 @@ namespace BOA_CLOTHING.Formularios
         {
             InitializeComponent();
         }
-        int cMantenimiento = 1;
-        int cReporte = 1;
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -49,12 +47,8 @@ namespace BOA_CLOTHING.Formularios
             btnMaximizar.Visible = true;
         }
 
-        private void btnOff_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        private void btnOff_Click(object sender, EventArgs e) { Application.Exit(); }
 
-        
         private void AbrirFrmHija(object frmhija)
         {
             Form fh = frmhija as Form;        
@@ -102,22 +96,22 @@ namespace BOA_CLOTHING.Formularios
 
         private void btnM_Empleado_Click(object sender, EventArgs e)
         {
-            panelSubmenuManteimiento.Visible = false;
+            AbrirFrmHija(new FrmMatenimientoEmpleado());
         }
 
         private void btnM_Cliente_Click(object sender, EventArgs e)
         {
-            panelSubmenuManteimiento.Visible = false;
+            AbrirFrmHija(new FrmMantenimientoCliente());
         }
 
         private void btnM_Mercancia_Click(object sender, EventArgs e)
         {
-            panelSubmenuManteimiento.Visible = false;
+            AbrirFrmHija(new FrmMantenimientoMercancia());
         }
 
         private void btnM_Facturas_Click(object sender, EventArgs e)
         {
-            panelSubmenuManteimiento.Visible = false;
+            AbrirFrmHija(new FrmMantenimientoFactura());
         } 
 
         private void pictureBox3_Click(object sender, EventArgs e)

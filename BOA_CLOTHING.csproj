@@ -138,6 +138,18 @@
     <EmbeddedResource Include="Formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMantenimientoCliente.resx">
+      <DependentUpon>FrmMantenimientoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMantenimientoFactura.resx">
+      <DependentUpon>FrmMantenimientoFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMantenimientoMercancia.resx">
+      <DependentUpon>FrmMantenimientoMercancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMatenimientoEmpleado.resx">
+      <DependentUpon>FrmMatenimientoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmMercancia.resx">
       <DependentUpon>FrmMercancia.cs</DependentUpon>
     </EmbeddedResource>
