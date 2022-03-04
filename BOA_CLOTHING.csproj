@@ -49,111 +49,126 @@
   <ItemGroup>
     <Compile Include="BaseDatos\SQLConnection.cs" />
     <Compile Include="Entidades\FLogin.cs" />
+    <Compile Include="Entidades\SP\spBuscarMercancia.cs" />
+    <Compile Include="Entidades\SP\spValidar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmCliente.cs">
+    <Compile Include="Formularios\Formularios Resportes\FrmReportesStockMercancia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmCliente.Designer.cs">
+    <Compile Include="Formularios\Formularios Resportes\FrmReportesStockMercancia.Designer.cs">
+      <DependentUpon>FrmReportesStockMercancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formularios Resportes\FrmReportesVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios Resportes\FrmReportesVentas.Designer.cs">
+      <DependentUpon>FrmReportesVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formularios Panel Principal\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios Panel Principal\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmCompra.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmCompra.Designer.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmCompra.Designer.cs">
       <DependentUpon>FrmCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmEmpleado.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmEmpleado.Designer.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmEmpleado.Designer.cs">
       <DependentUpon>FrmEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmHome.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmHome.Designer.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmLogin.cs">
+    <Compile Include="Formularios\Formulario Login\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmLogin.Designer.cs">
+    <Compile Include="Formularios\Formulario Login\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmMantenimientoCliente.cs">
+    <Compile Include="Formularios\Formularios Matenimiento\FrmMantenimientoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmMantenimientoCliente.Designer.cs">
+    <Compile Include="Formularios\Formularios Matenimiento\FrmMantenimientoCliente.Designer.cs">
       <DependentUpon>FrmMantenimientoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmMantenimientoFactura.cs">
+    <Compile Include="Formularios\Formularios Matenimiento\FrmMantenimientoFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmMantenimientoFactura.Designer.cs">
+    <Compile Include="Formularios\Formularios Matenimiento\FrmMantenimientoFactura.Designer.cs">
       <DependentUpon>FrmMantenimientoFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmMantenimientoMercancia.cs">
+    <Compile Include="Formularios\Formularios Matenimiento\FrmMantenimientoMercancia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmMantenimientoMercancia.Designer.cs">
+    <Compile Include="Formularios\Formularios Matenimiento\FrmMantenimientoMercancia.Designer.cs">
       <DependentUpon>FrmMantenimientoMercancia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmMatenimientoEmpleado.cs">
+    <Compile Include="Formularios\Formularios Matenimiento\FrmMatenimientoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmMatenimientoEmpleado.Designer.cs">
+    <Compile Include="Formularios\Formularios Matenimiento\FrmMatenimientoEmpleado.Designer.cs">
       <DependentUpon>FrmMatenimientoEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmMercancia.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmMercancia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmMercancia.Designer.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmMercancia.Designer.cs">
       <DependentUpon>FrmMercancia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmNuevaVenta.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmNuevaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmNuevaVenta.Designer.cs">
+    <Compile Include="Formularios\Formularios Panel Principal\FrmNuevaVenta.Designer.cs">
       <DependentUpon>FrmNuevaVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Herramientas\Limpiar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\FrmCliente.resx">
+    <EmbeddedResource Include="Formularios\Formularios Panel Principal\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmCompra.resx">
+    <EmbeddedResource Include="Formularios\Formularios Panel Principal\FrmCompra.resx">
       <DependentUpon>FrmCompra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmEmpleado.resx">
+    <EmbeddedResource Include="Formularios\Formularios Panel Principal\FrmEmpleado.resx">
       <DependentUpon>FrmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmHome.resx">
+    <EmbeddedResource Include="Formularios\Formularios Panel Principal\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmLogin.resx">
+    <EmbeddedResource Include="Formularios\Formulario Login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmMantenimientoCliente.resx">
+    <EmbeddedResource Include="Formularios\Formularios Matenimiento\FrmMantenimientoCliente.resx">
       <DependentUpon>FrmMantenimientoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmMantenimientoFactura.resx">
+    <EmbeddedResource Include="Formularios\Formularios Matenimiento\FrmMantenimientoFactura.resx">
       <DependentUpon>FrmMantenimientoFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmMantenimientoMercancia.resx">
+    <EmbeddedResource Include="Formularios\Formularios Matenimiento\FrmMantenimientoMercancia.resx">
       <DependentUpon>FrmMantenimientoMercancia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmMatenimientoEmpleado.resx">
+    <EmbeddedResource Include="Formularios\Formularios Matenimiento\FrmMatenimientoEmpleado.resx">
       <DependentUpon>FrmMatenimientoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmMercancia.resx">
+    <EmbeddedResource Include="Formularios\Formularios Panel Principal\FrmMercancia.resx">
       <DependentUpon>FrmMercancia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmNuevaVenta.resx">
+    <EmbeddedResource Include="Formularios\Formularios Panel Principal\FrmNuevaVenta.resx">
       <DependentUpon>FrmNuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

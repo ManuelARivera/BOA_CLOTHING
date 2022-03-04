@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BOA_CLOTHING.Formularios
+namespace BOA_CLOTHING.Formularios.Formularios_Resportes
 {
-    public partial class FrmNuevaVenta : Form
+    public partial class FrmReportesVentas : Form
     {
-        public FrmNuevaVenta()
+        public FrmReportesVentas()
         {
             InitializeComponent();
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Close();
-            
         }
     }
 }

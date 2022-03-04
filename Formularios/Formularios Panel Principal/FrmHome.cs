@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using BOA_CLOTHING.Formularios.Formularios_Resportes;
 
 namespace BOA_CLOTHING.Formularios
 {
@@ -131,12 +132,12 @@ namespace BOA_CLOTHING.Formularios
 
         private void btnR_Ventas_Click(object sender, EventArgs e)
         {
-            panelSubmenuReportes.Visible = false;
+            AbrirFrmHija(new FrmReportesVentas());
         }
 
         private void btnR_StockProducto_Click(object sender, EventArgs e)
         {
-            panelSubmenuReportes.Visible = false;
+            AbrirFrmHija(new FrmReportesStockMercancia());
         }
     }
 }
