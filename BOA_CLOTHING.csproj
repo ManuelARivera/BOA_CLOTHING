@@ -48,8 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDatos\SQLConnection.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\FLogin.cs" />
     <Compile Include="Entidades\SP\spBuscarMercancia.cs" />
+    <Compile Include="Entidades\SP\spInsertar.cs" />
     <Compile Include="Entidades\SP\spValidar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

@@ -62,7 +62,7 @@ namespace BOA_CLOTHING.Formularios
             this.label16 = new System.Windows.Forms.Label();
             this.txtEfectivo = new System.Windows.Forms.TextBox();
             this.gbControles = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
@@ -93,6 +93,7 @@ namespace BOA_CLOTHING.Formularios
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(862, 99);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -225,6 +226,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnCargarLista
             // 
+            this.btnCargarLista.Enabled = false;
             this.btnCargarLista.Location = new System.Drawing.Point(40, 284);
             this.btnCargarLista.Name = "btnCargarLista";
             this.btnCargarLista.Size = new System.Drawing.Size(299, 32);
@@ -368,10 +370,11 @@ namespace BOA_CLOTHING.Formularios
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.Size = new System.Drawing.Size(259, 37);
             this.txtEfectivo.TabIndex = 26;
+            this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
             // 
             // gbControles
             // 
-            this.gbControles.Controls.Add(this.textBox1);
+            this.gbControles.Controls.Add(this.txtCantidad);
             this.gbControles.Controls.Add(this.lblTipo);
             this.gbControles.Controls.Add(this.txtidMercancia);
             this.gbControles.Controls.Add(this.lblPrecio);
@@ -382,13 +385,13 @@ namespace BOA_CLOTHING.Formularios
             this.gbControles.TabIndex = 27;
             this.gbControles.TabStop = false;
             // 
-            // textBox1
+            // txtCantidad
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(6, 145);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(38, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCantidad.Location = new System.Drawing.Point(6, 145);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(38, 20);
+            this.txtCantidad.TabIndex = 15;
             // 
             // FrmNuevaVenta
             // 
@@ -468,6 +471,6 @@ namespace BOA_CLOTHING.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.GroupBox gbControles;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCantidad;
     }
 }
