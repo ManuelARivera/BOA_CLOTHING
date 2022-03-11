@@ -19,6 +19,7 @@ namespace BOA_CLOTHING.Entidades.SP
             SqlCommand cmd = new SqlCommand(Nombreprocedure, cn.Conexion());
 
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@idColaborador", empleado.iDEmpleado);
             cmd.Parameters.AddWithValue("@Nombre", empleado.Nombre);
             cmd.Parameters.AddWithValue("@Apellido", empleado.Apellido);
             cmd.Parameters.AddWithValue("@Telefono", empleado.Telefono);

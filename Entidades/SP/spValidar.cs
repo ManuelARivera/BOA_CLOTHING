@@ -50,25 +50,5 @@ namespace BOA_CLOTHING.Entidades.SP
             SQLConnection.CerrarConexion();
             return existe;
         }
-        public static bool Existe(string nombredeprocedure, string Nombre, string Apellido)
-        {
-            bool existe = false;
-
-            SqlCommand cmd = new SqlCommand(nombredeprocedure, cn.Conexion());
-
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Nombre", Nombre);
-            cmd.Parameters.AddWithValue("@Apellido", Apellido);
-
-            SQLConnection.AbrirConexion();
-            SqlDataReader lector = cmd.ExecuteReader();
-
-            if (lector.Read())
-            {
-                existe = true;
-            }
-            SQLConnection.CerrarConexion();
-            return existe;
-        }
     }
 }

@@ -45,8 +45,11 @@ namespace BOA_CLOTHING.Formularios
             this.label6 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
             this.gbControles = new System.Windows.Forms.GroupBox();
+            this.txtidEmpleado = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.gbControles.SuspendLayout();
@@ -56,9 +59,9 @@ namespace BOA_CLOTHING.Formularios
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(138, 234);
+            this.pictureBox1.Location = new System.Drawing.Point(156, 260);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(39, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -89,7 +92,7 @@ namespace BOA_CLOTHING.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 133);
+            this.label2.Location = new System.Drawing.Point(29, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 3;
@@ -97,24 +100,26 @@ namespace BOA_CLOTHING.Formularios
             // 
             // txtNombre
             // 
-            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.Location = new System.Drawing.Point(6, 19);
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombre.Location = new System.Drawing.Point(6, 52);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(189, 20);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtApellido
             // 
-            this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApellido.Location = new System.Drawing.Point(6, 45);
+            this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApellido.Location = new System.Drawing.Point(6, 78);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(189, 20);
             this.txtApellido.TabIndex = 6;
+            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 159);
+            this.label3.Location = new System.Drawing.Point(29, 187);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 5;
@@ -122,16 +127,17 @@ namespace BOA_CLOTHING.Formularios
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefono.Location = new System.Drawing.Point(6, 71);
+            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefono.Location = new System.Drawing.Point(6, 104);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(189, 20);
             this.txtTelefono.TabIndex = 8;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 185);
+            this.label4.Location = new System.Drawing.Point(24, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 7;
@@ -139,16 +145,17 @@ namespace BOA_CLOTHING.Formularios
             // 
             // txtCargo
             // 
-            this.txtCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCargo.Location = new System.Drawing.Point(6, 97);
+            this.txtCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCargo.Location = new System.Drawing.Point(6, 130);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(189, 20);
             this.txtCargo.TabIndex = 10;
+            this.txtCargo.TextChanged += new System.EventHandler(this.txtCargo_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 211);
+            this.label5.Location = new System.Drawing.Point(38, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 9;
@@ -156,16 +163,17 @@ namespace BOA_CLOTHING.Formularios
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsuario.Location = new System.Drawing.Point(6, 123);
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsuario.Location = new System.Drawing.Point(6, 156);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(189, 20);
             this.txtUsuario.TabIndex = 12;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 237);
+            this.label6.Location = new System.Drawing.Point(30, 265);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 11;
@@ -173,47 +181,79 @@ namespace BOA_CLOTHING.Formularios
             // 
             // txtPassword
             // 
-            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Location = new System.Drawing.Point(6, 149);
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassword.Location = new System.Drawing.Point(6, 182);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(189, 20);
             this.txtPassword.TabIndex = 14;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 263);
+            this.label7.Location = new System.Drawing.Point(20, 291);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 13;
             this.label7.Text = "Password:";
             // 
-            // button1
+            // btnCrear
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(6, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 50);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Crear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrear.Location = new System.Drawing.Point(6, 208);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(93, 50);
+            this.btnCrear.TabIndex = 15;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.button1_Click);
             // 
             // gbControles
             // 
+            this.gbControles.Controls.Add(this.btnLimpiar);
+            this.gbControles.Controls.Add(this.txtidEmpleado);
             this.gbControles.Controls.Add(this.txtNombre);
             this.gbControles.Controls.Add(this.txtApellido);
-            this.gbControles.Controls.Add(this.button1);
+            this.gbControles.Controls.Add(this.btnCrear);
             this.gbControles.Controls.Add(this.pictureBox1);
             this.gbControles.Controls.Add(this.txtUsuario);
             this.gbControles.Controls.Add(this.txtPassword);
             this.gbControles.Controls.Add(this.txtCargo);
             this.gbControles.Controls.Add(this.txtTelefono);
-            this.gbControles.Location = new System.Drawing.Point(76, 107);
+            this.gbControles.Location = new System.Drawing.Point(76, 106);
             this.gbControles.Name = "gbControles";
-            this.gbControles.Size = new System.Drawing.Size(210, 299);
+            this.gbControles.Size = new System.Drawing.Size(210, 300);
             this.gbControles.TabIndex = 16;
             this.gbControles.TabStop = false;
+            // 
+            // txtidEmpleado
+            // 
+            this.txtidEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtidEmpleado.Location = new System.Drawing.Point(6, 26);
+            this.txtidEmpleado.Name = "txtidEmpleado";
+            this.txtidEmpleado.Size = new System.Drawing.Size(189, 20);
+            this.txtidEmpleado.TabIndex = 2;
+            this.txtidEmpleado.TextChanged += new System.EventHandler(this.txtidEmpleado_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 139);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Cédula:";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.Location = new System.Drawing.Point(102, 208);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(93, 50);
+            this.btnLimpiar.TabIndex = 16;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // FrmEmpleado
             // 
@@ -222,6 +262,7 @@ namespace BOA_CLOTHING.Formularios
             this.ClientSize = new System.Drawing.Size(298, 418);
             this.ControlBox = false;
             this.Controls.Add(this.gbControles);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
@@ -232,6 +273,7 @@ namespace BOA_CLOTHING.Formularios
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEmpleado";
             this.Text = "FrmEmpleados";
+            this.Load += new System.EventHandler(this.FrmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -259,7 +301,10 @@ namespace BOA_CLOTHING.Formularios
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.GroupBox gbControles;
+        private System.Windows.Forms.TextBox txtidEmpleado;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

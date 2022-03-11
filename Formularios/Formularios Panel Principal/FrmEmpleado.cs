@@ -31,8 +31,10 @@ namespace BOA_CLOTHING.Formularios
             Empleado emplado = new Empleado();
             try
             {
-                if(spValidar.Existe("sp_ValidarColaborador", txtNombre.Text, txtApellido.Text).Equals(false))
+                if(spValidar.Existe("sp_ValidarColaborador", txtidEmpleado.Text).Equals(false))
                 {
+
+                    emplado.iDEmpleado = txtidEmpleado.Text;
                     emplado.Nombre = txtNombre.Text;
                     emplado.Apellido = txtApellido.Text;
                     emplado.Telefono = txtTelefono.Text;
@@ -40,20 +42,83 @@ namespace BOA_CLOTHING.Formularios
                     emplado.Usuario = txtUsuario.Text;
                     emplado.Passwords = txtPassword.Text;
 
-                    spInsertar.Insertar("sp_InsertarEmpleado", emplado);
-                    SQLConnection.CerrarConexion();
-                    Limpiar.Limpia(gbControles);
+                    int num = spInsertar.Insertar("sp_InsertarEmpleado", emplado);
+
+                    if (num > 0)
+                    {
+                        MessageBox.Show("Los datos fueron insertado satisfactoriamente");
+                        Limpiar.Limpia(gbControles);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Empleado introducio ya existe en nuestra base de datos");
+                    MessageBox.Show("La cedula se encuentra registrada en nuestra base de datos");
                 }
+                SQLConnection.CerrarConexion();
             }
             catch (Exception error)
             {
 
                 MessageBox.Show(error.Message);
             }
+        }
+
+        private void FrmEmpleado_Load(object sender, EventArgs e)
+        {
+            btnCrear.Enabled = false;
+        }
+
+        private void ValidarCampo()
+        {
+            var vr = !string.IsNullOrEmpty(txtidEmpleado.Text) &&
+                !string.IsNullOrEmpty(txtNombre.Text) &&
+                !string.IsNullOrEmpty(txtApellido.Text) &&
+                !string.IsNullOrEmpty(txtTelefono.Text) &&
+                !string.IsNullOrEmpty(txtCargo.Text) &&
+                !string.IsNullOrEmpty(txtUsuario.Text) &&
+                !string.IsNullOrEmpty(txtPassword.Text);
+            btnCrear.Enabled = vr;
+
+        }
+
+        private void txtidEmpleado_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampo();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampo();
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampo();
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampo();
+        }
+
+        private void txtCargo_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampo();
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampo();
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampo();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar.Limpia(gbControles);
         }
     }
 }

@@ -8,6 +8,7 @@ namespace BOA_CLOTHING.Entidades
 {
     class Empleado
     {
+        private string _idempleado;
         private string _nombre;
         private string _apellido;
         private string _telefono;
@@ -15,6 +16,11 @@ namespace BOA_CLOTHING.Entidades
         private string _usuario;
         private string _passwords;
 
+        public string iDEmpleado
+        {
+            get { return _idempleado; }
+            set { _idempleado = value; }
+        }
         public string Nombre
         {
             get { return _nombre;  }
