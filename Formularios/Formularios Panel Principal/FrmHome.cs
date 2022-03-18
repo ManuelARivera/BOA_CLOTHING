@@ -139,5 +139,6 @@ namespace BOA_CLOTHING.Formularios
         {
             AbrirFrmHija(new FrmReportesStockMercancia());
         }
+
     }
 }

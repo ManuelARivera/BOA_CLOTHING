@@ -6,36 +6,12 @@ using System.Threading.Tasks;
 
 namespace BOA_CLOTHING.Entidades
 {
-    class Empleado
+    class Empleado : Persona
     {
-        private string _idempleado;
-        private string _nombre;
-        private string _apellido;
-        private string _telefono;
         private string _cargo;
         private string _usuario;
         private string _passwords;
 
-        public string iDEmpleado
-        {
-            get { return _idempleado; }
-            set { _idempleado = value; }
-        }
-        public string Nombre
-        {
-            get { return _nombre;  }
-            set { _nombre = value; }
-        }
-        public string Apellido
-        {
-            get { return _apellido; }
-            set { _apellido = value; }
-        }
-        public string Telefono
-        {
-            get { return _telefono; }
-            set { _telefono = value; }
-        }
         public string Cargo
         {
             get { return _cargo; }

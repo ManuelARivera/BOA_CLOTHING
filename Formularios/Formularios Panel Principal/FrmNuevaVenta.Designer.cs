@@ -365,6 +365,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // txtEfectivo
             // 
+            this.txtEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEfectivo.Location = new System.Drawing.Point(591, 322);
             this.txtEfectivo.Multiline = true;
             this.txtEfectivo.Name = "txtEfectivo";

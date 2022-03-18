@@ -69,7 +69,7 @@ namespace BOA_CLOTHING.Formularios
                     dgvLista.Rows.Add(ListaVenta[Fila, 0], ListaVenta[Fila, 1], ListaVenta[Fila, 2], ListaVenta[Fila, 3], ListaVenta[Fila, 4]);
                     Fila++;
                     CostoPagar();
-                    Limpiar.Limpia(gbControles);
+                    Limpiar.Limpia2(gbControles);
                 }
                 else
                 {
@@ -87,14 +87,14 @@ namespace BOA_CLOTHING.Formularios
 
         private void CostoPagar()
         {
-            float CostoTotal = 0;
+            decimal CostoTotal = 0;
             int conteo = 0;
 
             conteo = dgvLista.RowCount;
 
             for(int i = 0; i < conteo; i++ )
             {
-                CostoTotal += float.Parse(dgvLista.Rows[i].Cells[4].Value.ToString());
+                CostoTotal += decimal.Parse(dgvLista.Rows[i].Cells[4].Value.ToString());
             }
             lblCostoApagar.Text = CostoTotal.ToString();
         }
@@ -108,7 +108,7 @@ namespace BOA_CLOTHING.Formularios
         {
             try
             {
-                lblDevolucion.Text = (float.Parse(txtEfectivo.Text)- float.Parse(lblCostoApagar.Text)).ToString();
+                lblDevolucion.Text = (decimal.Parse(txtEfectivo.Text)- decimal.Parse(lblCostoApagar.Text)).ToString();
             }
             catch 
             {

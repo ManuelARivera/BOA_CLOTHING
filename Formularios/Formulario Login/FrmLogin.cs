@@ -89,5 +89,10 @@ namespace BOA_CLOTHING.Formularios
         {
             FLogin.ConsultarLogin(txtUser.Text, txtPass.Text);
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

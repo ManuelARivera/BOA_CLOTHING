@@ -1,4 +1,9 @@
 ﻿using System;
+using BOA_CLOTHING.Entidades.SP;
+using BOA_CLOTHING.Entidades;
+using BOA_CLOTHING.BaseDatos;
+using System.Windows.Forms;
+using LaboratorioNo5.Entidades;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,11 +11,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BOA_CLOTHING.Entidades.SP;
-using BOA_CLOTHING.Entidades;
-using BOA_CLOTHING.BaseDatos;
-using System.Windows.Forms;
-using LaboratorioNo5.Entidades;
+
 
 namespace BOA_CLOTHING.Formularios
 {
@@ -29,12 +30,13 @@ namespace BOA_CLOTHING.Formularios
         private void button1_Click(object sender, EventArgs e)
         {
             Empleado emplado = new Empleado();
+        
             try
             {
                 if(spValidar.Existe("sp_ValidarColaborador", txtidEmpleado.Text).Equals(false))
                 {
 
-                    emplado.iDEmpleado = txtidEmpleado.Text;
+                    emplado.iD = txtidEmpleado.Text;
                     emplado.Nombre = txtNombre.Text;
                     emplado.Apellido = txtApellido.Text;
                     emplado.Telefono = txtTelefono.Text;
@@ -119,6 +121,11 @@ namespace BOA_CLOTHING.Formularios
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar.Limpia(gbControles);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

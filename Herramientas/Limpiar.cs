@@ -17,6 +17,16 @@ namespace LaboratorioNo5.Entidades
                 {
                     ((TextBox)combo).Clear(); 
                 }
+            }
+        }
+        public static void Limpia2(GroupBox gb)
+        {
+            foreach (var combo in gb.Controls)
+            {
+                if (combo is TextBox)
+                {
+                    ((TextBox)combo).Clear();
+                }
                 if (combo is Label)
                 {
                     ((Label)combo).Text = "...";

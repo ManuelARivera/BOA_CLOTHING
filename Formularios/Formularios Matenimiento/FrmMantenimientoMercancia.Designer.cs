@@ -30,212 +30,332 @@ namespace BOA_CLOTHING.Formularios
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMantenimientoMercancia));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dgvMercancia = new System.Windows.Forms.DataGridView();
+            this.btnDespachar = new System.Windows.Forms.Button();
+            this.gbControles = new System.Windows.Forms.GroupBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtidMercancia = new System.Windows.Forms.TextBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMercancia)).BeginInit();
+            this.gbControles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvMercancia
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(602, 285);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvMercancia.AllowUserToAddRows = false;
+            this.dgvMercancia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMercancia.Location = new System.Drawing.Point(12, 39);
+            this.dgvMercancia.Name = "dgvMercancia";
+            this.dgvMercancia.ReadOnly = true;
+            this.dgvMercancia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMercancia.Size = new System.Drawing.Size(535, 285);
+            this.dgvMercancia.TabIndex = 0;
             // 
-            // panel1
+            // btnDespachar
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.txtStock);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtDescripcion);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtPrecio);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtMarca);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtTipo);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(620, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 312);
-            this.panel1.TabIndex = 1;
+            this.btnDespachar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnDespachar.Location = new System.Drawing.Point(424, 12);
+            this.btnDespachar.Name = "btnDespachar";
+            this.btnDespachar.Size = new System.Drawing.Size(125, 21);
+            this.btnDespachar.TabIndex = 2;
+            this.btnDespachar.Text = "Despachar";
+            this.btnDespachar.UseVisualStyleBackColor = true;
+            this.btnDespachar.Click += new System.EventHandler(this.btnDespachar_Click);
             // 
-            // btnGuardar
+            // gbControles
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(86, 202);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(216, 41);
-            this.btnGuardar.TabIndex = 12;
-            this.btnGuardar.Text = "Guardar ";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(86, 130);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(216, 20);
-            this.txtStock.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(38, 134);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 16);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Stock";
+            this.gbControles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbControles.BackColor = System.Drawing.SystemColors.Control;
+            this.gbControles.Controls.Add(this.txtDescripcion);
+            this.gbControles.Controls.Add(this.btnEliminar);
+            this.gbControles.Controls.Add(this.pictureBox2);
+            this.gbControles.Controls.Add(this.btnLimpiar);
+            this.gbControles.Controls.Add(this.label7);
+            this.gbControles.Controls.Add(this.txtidMercancia);
+            this.gbControles.Controls.Add(this.txtTipo);
+            this.gbControles.Controls.Add(this.label13);
+            this.gbControles.Controls.Add(this.label8);
+            this.gbControles.Controls.Add(this.label12);
+            this.gbControles.Controls.Add(this.txtMarca);
+            this.gbControles.Controls.Add(this.label9);
+            this.gbControles.Controls.Add(this.btnActualizar);
+            this.gbControles.Controls.Add(this.txtPrecio);
+            this.gbControles.Controls.Add(this.label10);
+            this.gbControles.Location = new System.Drawing.Point(555, 12);
+            this.gbControles.Name = "gbControles";
+            this.gbControles.Size = new System.Drawing.Size(333, 312);
+            this.gbControles.TabIndex = 3;
+            this.gbControles.TabStop = false;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(86, 156);
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescripcion.Location = new System.Drawing.Point(91, 146);
+            this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(216, 20);
-            this.txtDescripcion.TabIndex = 9;
+            this.txtDescripcion.Size = new System.Drawing.Size(216, 50);
+            this.txtDescripcion.TabIndex = 18;
             // 
-            // label5
+            // btnEliminar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Descripcion";
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Location = new System.Drawing.Point(165, 202);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(68, 41);
+            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtPrecio
+            // pictureBox2
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(86, 104);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(216, 20);
-            this.txtPrecio.TabIndex = 5;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(242, 249);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(65, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label3
+            // btnLimpiar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(30, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Precio ";
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.Location = new System.Drawing.Point(239, 202);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(68, 41);
+            this.btnLimpiar.TabIndex = 16;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // txtMarca
+            // label7
             // 
-            this.txtMarca.Location = new System.Drawing.Point(86, 78);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(216, 20);
-            this.txtMarca.TabIndex = 3;
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(49, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Tipo";
             // 
-            // label2
+            // txtidMercancia
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(34, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Marca";
+            this.txtidMercancia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtidMercancia.Enabled = false;
+            this.txtidMercancia.Location = new System.Drawing.Point(91, 42);
+            this.txtidMercancia.Name = "txtidMercancia";
+            this.txtidMercancia.Size = new System.Drawing.Size(40, 20);
+            this.txtidMercancia.TabIndex = 15;
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(86, 52);
+            this.txtTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTipo.Location = new System.Drawing.Point(91, 68);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(216, 20);
             this.txtTipo.TabIndex = 1;
             // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(33, 46);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(52, 16);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Código";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(39, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 16);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Marca";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(103, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(204, 20);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Matenimiento Mercancia";
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMarca.Location = new System.Drawing.Point(91, 94);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(216, 20);
+            this.txtMarca.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(35, 124);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 16);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Precio ";
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Location = new System.Drawing.Point(91, 202);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(68, 41);
+            this.btnActualizar.TabIndex = 12;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrecio.Location = new System.Drawing.Point(91, 120);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(216, 20);
+            this.txtPrecio.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(8, 150);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 16);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Descripción";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 56);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tipo";
+            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Código:";
             // 
-            // label6
+            // txtCodigo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(98, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(204, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Matenimiento Mercancia";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(236, 249);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.txtCodigo.Location = new System.Drawing.Point(77, 14);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(40, 20);
+            this.txtCodigo.TabIndex = 5;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.Filtrar);
             // 
             // FrmMantenimientoMercancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
-            this.ClientSize = new System.Drawing.Size(965, 336);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.ClientSize = new System.Drawing.Size(900, 336);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.gbControles);
+            this.Controls.Add(this.btnDespachar);
+            this.Controls.Add(this.dgvMercancia);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMantenimientoMercancia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMantenimientoMercancia";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmMantenimientoMercancia_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMercancia)).EndInit();
+            this.gbControles.ResumeLayout(false);
+            this.gbControles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvMercancia;
+        private System.Windows.Forms.Button btnDespachar;
+        private System.Windows.Forms.GroupBox gbControles;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtidMercancia;
         private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }
