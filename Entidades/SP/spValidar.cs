@@ -12,14 +12,14 @@ namespace BOA_CLOTHING.Entidades.SP
     class spValidar
     {
         static SQLConnection cn = new SQLConnection();
-        public static bool Existe(string nombredeprocedure, int id)
+        public static bool Existe(string nombredeprocedure, string cogido)
         {
             bool existe = false;
 
             SqlCommand cmd = new SqlCommand(nombredeprocedure, cn.Conexion());
 
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@idMercancia", cogido);
 
             SQLConnection.AbrirConexion();
             SqlDataReader lector = cmd.ExecuteReader();
@@ -31,14 +31,14 @@ namespace BOA_CLOTHING.Entidades.SP
             SQLConnection.CerrarConexion();
             return existe;
         }
-        public static bool Existe(string nombredeprocedure, string id)
+        public static bool ExistePerson(string nombredeprocedure, string cedula)
         {
             bool existe = false;
 
             SqlCommand cmd = new SqlCommand(nombredeprocedure, cn.Conexion());
 
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@Cedula", cedula);
 
             SQLConnection.AbrirConexion();
             SqlDataReader lector = cmd.ExecuteReader();

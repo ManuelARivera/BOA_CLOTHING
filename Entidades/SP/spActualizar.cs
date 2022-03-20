@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BOA_CLOTHING.Entidades.SP
 {
@@ -24,6 +25,39 @@ namespace BOA_CLOTHING.Entidades.SP
             cmd.Parameters.AddWithValue("@Marca", mercancia.Marca);
             cmd.Parameters.AddWithValue("@Precio", mercancia.Precio);
             cmd.Parameters.AddWithValue("@Descripcion", mercancia.Descripcion);
+
+            return cmd.ExecuteNonQuery();
+        }
+        public static int Actualizar(string Nombreprocedure, Empleado empleado)
+        {
+            SQLConnection.AbrirConexion();
+
+            SqlCommand cmd = new SqlCommand(Nombreprocedure, cn.Conexion());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@idColaborador", empleado.iD);
+            cmd.Parameters.AddWithValue("@Nombre", empleado.Nombre);
+            cmd.Parameters.AddWithValue("@Apellido", empleado.Apellido);
+            cmd.Parameters.AddWithValue("@Cedula", empleado.Cedula);
+            cmd.Parameters.AddWithValue("@Telefono", empleado.Telefono);
+            cmd.Parameters.AddWithValue("@Cargo", empleado.Cargo);
+
+            return cmd.ExecuteNonQuery();
+        }
+        public static int Actualizar(string Nombreprocedure, Cliente cliente)
+        {
+            SQLConnection.AbrirConexion();
+
+            SqlCommand cmd = new SqlCommand(Nombreprocedure, cn.Conexion());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@idCliente", cliente.iD);
+            cmd.Parameters.AddWithValue("@Nombre", cliente.Nombre);
+            cmd.Parameters.AddWithValue("@Apellido", cliente.Apellido);
+            cmd.Parameters.AddWithValue("@Cedula", cliente.Cedula);
+            cmd.Parameters.AddWithValue("@Telefono", cliente.Telefono);
+            cmd.Parameters.AddWithValue("@Direccion", cliente.Direccion);
+            cmd.Parameters.AddWithValue("@RNC", cliente.RNC);
 
             return cmd.ExecuteNonQuery();
         }

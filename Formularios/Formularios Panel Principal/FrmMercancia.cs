@@ -65,10 +65,11 @@ namespace BOA_CLOTHING.Formularios
         private void btnCrear_Click(object sender, EventArgs e)
         {
             Mercancia mr = new Mercancia();
+            string Codigo =  txtidMercancia.Text;
 
             try
             {
-                if (spValidar.Existe("sp_ValidarColaborador", txtidMercancia.Text).Equals(false))
+                if (spValidar.Existe("sp_ValidarMercancia", Codigo).Equals(false))
                 {
                     mr.Codigo = txtidMercancia.Text;
                     mr.Tipo = txtTipo.Text;

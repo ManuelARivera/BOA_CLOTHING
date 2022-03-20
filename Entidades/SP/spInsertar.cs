@@ -19,9 +19,9 @@ namespace BOA_CLOTHING.Entidades.SP
             SqlCommand cmd = new SqlCommand(Nombreprocedure, cn.Conexion());
 
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@idColaborador", empleado.iD);
             cmd.Parameters.AddWithValue("@Nombre", empleado.Nombre);
             cmd.Parameters.AddWithValue("@Apellido", empleado.Apellido);
+            cmd.Parameters.AddWithValue("@Cedula", empleado.Cedula);
             cmd.Parameters.AddWithValue("@Telefono", empleado.Telefono);
             cmd.Parameters.AddWithValue("@Cargo", empleado.Cargo);
             cmd.Parameters.AddWithValue("@Usuario", empleado.Usuario);
@@ -55,9 +55,9 @@ namespace BOA_CLOTHING.Entidades.SP
             SqlCommand cmd = new SqlCommand(Nombreprocedure, cn.Conexion());
 
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@idCliente", cliente.iD);
             cmd.Parameters.AddWithValue("@Nombre", cliente.Nombre);
             cmd.Parameters.AddWithValue("@Apellido", cliente.Apellido);
+            cmd.Parameters.AddWithValue("@Cedula", cliente.Cedula);
             cmd.Parameters.AddWithValue("@Telefono", cliente.Telefono);
             cmd.Parameters.AddWithValue("@Direccion", cliente.Direccion);
             cmd.Parameters.AddWithValue("@RNC", cliente.RNC);

@@ -17,7 +17,7 @@ namespace BOA_CLOTHING
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMantenimientoMercancia());
+            Application.Run(new FrmLogin());
         }
     }
 }

@@ -359,7 +359,7 @@ namespace BOA_CLOTHING.Formularios
             this.btnM_Cliente.Name = "btnM_Cliente";
             this.btnM_Cliente.Size = new System.Drawing.Size(160, 32);
             this.btnM_Cliente.TabIndex = 11;
-            this.btnM_Cliente.Text = "Cientes";
+            this.btnM_Cliente.Text = "Clientes";
             this.btnM_Cliente.UseVisualStyleBackColor = true;
             this.btnM_Cliente.Click += new System.EventHandler(this.btnM_Cliente_Click);
             // 

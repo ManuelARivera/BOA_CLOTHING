@@ -33,7 +33,7 @@ namespace BOA_CLOTHING.Formularios
 
         private void ValidarCampo()
         {
-            var vr = !string.IsNullOrEmpty(txtidCliente.Text) &&
+            var vr = !string.IsNullOrEmpty(txtCedula.Text) &&
                 !string.IsNullOrEmpty(txtNombre.Text) &&
                 !string.IsNullOrEmpty(txtApellido.Text) &&
                 !string.IsNullOrEmpty(txtTelefono.Text) &&
@@ -73,11 +73,11 @@ namespace BOA_CLOTHING.Formularios
 
             try
             {
-                if (spValidar.Existe("sp_ValidarColaborador", txtidCliente.Text).Equals(false))
+                if (spValidar.ExistePerson("sp_ValidarCliente", txtCedula.Text).Equals(false))
                 {
-                    cliente.iD = txtidCliente.Text;
                     cliente.Nombre = txtNombre.Text;
                     cliente.Apellido = txtApellido.Text;
+                    cliente.Cedula = txtCedula.Text;
                     cliente.Telefono = txtTelefono.Text;
                     cliente.Direccion = txtDireccion.Text;
                     cliente.RNC = txtRnc.Text;

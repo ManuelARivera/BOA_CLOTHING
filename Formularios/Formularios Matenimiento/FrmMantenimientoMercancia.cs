@@ -29,6 +29,7 @@ namespace BOA_CLOTHING.Formularios
         private void FrmMantenimientoMercancia_Load(object sender, EventArgs e)
         {
             spMostrarGrilla.LeerGrilla("sp_MostrarMercancia", dgvMercancia);
+            SQLConnection.CerrarConexion();
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
         }
@@ -58,7 +59,7 @@ namespace BOA_CLOTHING.Formularios
         {
          
             spFiltrar.FiltradoDatos("sp_FiltrarMercancia", "@idMercancia", txtCodigo.Text, dgvMercancia);
-            SQLConnection.CerrarConexion();
+            
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -108,6 +109,7 @@ namespace BOA_CLOTHING.Formularios
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar.Limpia(gbControles);
+            FrmMantenimientoMercancia_Load(null, null);
         }
     }
 }

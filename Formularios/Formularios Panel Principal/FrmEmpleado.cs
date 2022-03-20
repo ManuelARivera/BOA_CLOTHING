@@ -30,15 +30,17 @@ namespace BOA_CLOTHING.Formularios
         private void button1_Click(object sender, EventArgs e)
         {
             Empleado emplado = new Empleado();
+            string Cedula = txtCedula.Text;
         
             try
             {
-                if(spValidar.Existe("sp_ValidarColaborador", txtidEmpleado.Text).Equals(false))
+                if(spValidar.ExistePerson("sp_ValidarColaborador", Cedula).Equals(false))
                 {
 
-                    emplado.iD = txtidEmpleado.Text;
+                    
                     emplado.Nombre = txtNombre.Text;
                     emplado.Apellido = txtApellido.Text;
+                    emplado.Cedula = txtCedula.Text;
                     emplado.Telefono = txtTelefono.Text;
                     emplado.Cargo = txtCargo.Text;
                     emplado.Usuario = txtUsuario.Text;
@@ -72,7 +74,7 @@ namespace BOA_CLOTHING.Formularios
 
         private void ValidarCampo()
         {
-            var vr = !string.IsNullOrEmpty(txtidEmpleado.Text) &&
+            var vr = !string.IsNullOrEmpty(txtCedula.Text) &&
                 !string.IsNullOrEmpty(txtNombre.Text) &&
                 !string.IsNullOrEmpty(txtApellido.Text) &&
                 !string.IsNullOrEmpty(txtTelefono.Text) &&

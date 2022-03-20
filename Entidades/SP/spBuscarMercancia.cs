@@ -12,12 +12,12 @@ namespace BOA_CLOTHING.Entidades.SP
     class spBuscarMercancia
     {
         static SQLConnection cn = new SQLConnection();
-        public static DataTable OptenerDatos( int idMercancia)
+        public static DataTable OptenerDatos( string id)
         {
 
             SqlCommand cmd = new SqlCommand("sp_BuscarMercancia", cn.Conexion());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@idMercancia", idMercancia);
+            cmd.Parameters.AddWithValue("@idMercancia", id);
 
             SqlDataAdapter sad = new SqlDataAdapter(cmd);
             DataTable tabla = new DataTable();

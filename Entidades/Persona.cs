@@ -8,12 +8,14 @@ namespace BOA_CLOTHING.Entidades
 {
     class Persona
     {
-        private string _id;
+        private int _id;
         private string _nombre;
         private string _apellido;
+        private string _cedula;
         private string _telefono;
+        private string _direccion;
 
-        public string iD
+        public int iD
         {
             get { return _id; }
             set { _id = value; }
@@ -28,10 +30,20 @@ namespace BOA_CLOTHING.Entidades
             get { return _apellido; }
             set { _apellido = value; }
         }
+        public string Cedula
+        {
+            get { return _cedula; }
+            set { _cedula = value; }
+        }
         public string Telefono
         {
             get { return _telefono; }
             set { _telefono = value; }
+        }
+        public string Direccion
+        {
+            get { return _direccion; }
+            set { _direccion = value; }
         }
     }
 }

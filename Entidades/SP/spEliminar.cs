@@ -23,5 +23,27 @@ namespace BOA_CLOTHING.Entidades.SP
 
             return cmd.ExecuteNonQuery();
         }
+        public static int Eliminar(string Nombreprocedure, Empleado empleado)
+        {
+            SQLConnection.AbrirConexion();
+
+            SqlCommand cmd = new SqlCommand(Nombreprocedure, cn.Conexion());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@idColaborador", empleado.iD);
+
+            return cmd.ExecuteNonQuery();
+        }
+        public static int Eliminar(string Nombreprocedure, Cliente cliente)
+        {
+            SQLConnection.AbrirConexion();
+
+            SqlCommand cmd = new SqlCommand(Nombreprocedure, cn.Conexion());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@idCliente", cliente.iD);
+
+            return cmd.ExecuteNonQuery();
+        }
     }
 }

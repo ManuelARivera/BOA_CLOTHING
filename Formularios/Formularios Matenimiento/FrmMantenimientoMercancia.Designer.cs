@@ -298,13 +298,13 @@ namespace BOA_CLOTHING.Formularios
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(97, 16);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Código:";
+            this.label1.Text = "idMercancia:";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(77, 14);
+            this.txtCodigo.Location = new System.Drawing.Point(112, 13);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(40, 20);
             this.txtCodigo.TabIndex = 5;

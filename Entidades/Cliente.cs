@@ -8,15 +8,8 @@ namespace BOA_CLOTHING.Entidades
 {
     class Cliente : Persona
     {
-        private string _direccion;
         private string _rnc;
     
-
-        public string Direccion
-        {
-            get { return _direccion; }
-            set { _direccion = value; }
-        }
         public string RNC
         {
             get { return _rnc; }

@@ -32,10 +32,10 @@ namespace BOA_CLOTHING.Formularios
         {
             try
             {
-                int idM = Convert.ToInt32(txtidMercancia.Text);
-                if (spValidar.Existe("sp_ValidarMercancia", idM).Equals(true))
+                string Id = txtidMercancia.Text;
+                if (spValidar.Existe("sp_ValidarMercancia", Id).Equals(true))
                 {
-                    DataTable table = spBuscarMercancia.OptenerDatos(idM);
+                    DataTable table = spBuscarMercancia.OptenerDatos(Id);
 
                     lblTipo.Text = table.Rows[0][0].ToString();
                     lblPrecio.Text = table.Rows[0][1].ToString();

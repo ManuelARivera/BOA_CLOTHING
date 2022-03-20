@@ -49,7 +49,7 @@ namespace BOA_CLOTHING.Formularios
             this.gbControles = new System.Windows.Forms.GroupBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtidEmpleado = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.gbControles.SuspendLayout();
@@ -93,7 +93,7 @@ namespace BOA_CLOTHING.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 55);
+            this.label2.Location = new System.Drawing.Point(20, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 3;
@@ -102,25 +102,25 @@ namespace BOA_CLOTHING.Formularios
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtNombre.Location = new System.Drawing.Point(73, 52);
+            this.txtNombre.Location = new System.Drawing.Point(73, 26);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(186, 20);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtApellido
             // 
             this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtApellido.Location = new System.Drawing.Point(73, 78);
+            this.txtApellido.Location = new System.Drawing.Point(73, 52);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(186, 20);
-            this.txtApellido.TabIndex = 6;
+            this.txtApellido.TabIndex = 4;
             this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 81);
+            this.label3.Location = new System.Drawing.Point(20, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 5;
@@ -213,7 +213,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             this.gbControles.Controls.Add(this.btnLimpiar);
             this.gbControles.Controls.Add(this.label8);
-            this.gbControles.Controls.Add(this.txtidEmpleado);
+            this.gbControles.Controls.Add(this.txtCedula);
             this.gbControles.Controls.Add(this.label2);
             this.gbControles.Controls.Add(this.txtNombre);
             this.gbControles.Controls.Add(this.label6);
@@ -248,20 +248,20 @@ namespace BOA_CLOTHING.Formularios
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 29);
+            this.label8.Location = new System.Drawing.Point(24, 81);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Cédula:";
             // 
-            // txtidEmpleado
+            // txtCedula
             // 
-            this.txtidEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtidEmpleado.Location = new System.Drawing.Point(73, 26);
-            this.txtidEmpleado.Name = "txtidEmpleado";
-            this.txtidEmpleado.Size = new System.Drawing.Size(186, 20);
-            this.txtidEmpleado.TabIndex = 2;
-            this.txtidEmpleado.TextChanged += new System.EventHandler(this.txtidEmpleado_TextChanged);
+            this.txtCedula.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtCedula.Location = new System.Drawing.Point(73, 78);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(186, 20);
+            this.txtCedula.TabIndex = 6;
+            this.txtCedula.TextChanged += new System.EventHandler(this.txtidEmpleado_TextChanged);
             // 
             // FrmEmpleado
             // 
@@ -304,7 +304,7 @@ namespace BOA_CLOTHING.Formularios
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.GroupBox gbControles;
-        private System.Windows.Forms.TextBox txtidEmpleado;
+        private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnLimpiar;
     }

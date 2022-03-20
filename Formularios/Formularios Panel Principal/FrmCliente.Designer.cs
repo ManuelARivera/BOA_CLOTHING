@@ -36,7 +36,7 @@ namespace BOA_CLOTHING.Formularios
             this.gbControles = new System.Windows.Forms.GroupBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtidCliente = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -93,7 +93,7 @@ namespace BOA_CLOTHING.Formularios
             this.gbControles.Controls.Add(this.btnLimpiar);
             this.gbControles.Controls.Add(this.label8);
             this.gbControles.Controls.Add(this.pictureBox1);
-            this.gbControles.Controls.Add(this.txtidCliente);
+            this.gbControles.Controls.Add(this.txtCedula);
             this.gbControles.Controls.Add(this.label2);
             this.gbControles.Controls.Add(this.txtNombre);
             this.gbControles.Controls.Add(this.label6);
@@ -125,25 +125,25 @@ namespace BOA_CLOTHING.Formularios
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 29);
+            this.label8.Location = new System.Drawing.Point(24, 81);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Cédula:";
             // 
-            // txtidCliente
+            // txtCedula
             // 
-            this.txtidCliente.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtidCliente.Location = new System.Drawing.Point(73, 26);
-            this.txtidCliente.Name = "txtidCliente";
-            this.txtidCliente.Size = new System.Drawing.Size(186, 20);
-            this.txtidCliente.TabIndex = 2;
-            this.txtidCliente.TextChanged += new System.EventHandler(this.txtidCliente_TextChanged);
+            this.txtCedula.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtCedula.Location = new System.Drawing.Point(73, 78);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(186, 20);
+            this.txtCedula.TabIndex = 2;
+            this.txtCedula.TextChanged += new System.EventHandler(this.txtidCliente_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 55);
+            this.label2.Location = new System.Drawing.Point(20, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 3;
@@ -152,7 +152,7 @@ namespace BOA_CLOTHING.Formularios
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtNombre.Location = new System.Drawing.Point(73, 52);
+            this.txtNombre.Location = new System.Drawing.Point(73, 26);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(186, 20);
             this.txtNombre.TabIndex = 4;
@@ -170,7 +170,7 @@ namespace BOA_CLOTHING.Formularios
             // txtApellido
             // 
             this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtApellido.Location = new System.Drawing.Point(73, 78);
+            this.txtApellido.Location = new System.Drawing.Point(73, 52);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(186, 20);
             this.txtApellido.TabIndex = 6;
@@ -199,7 +199,7 @@ namespace BOA_CLOTHING.Formularios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 81);
+            this.label3.Location = new System.Drawing.Point(20, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 5;
@@ -271,7 +271,7 @@ namespace BOA_CLOTHING.Formularios
         private System.Windows.Forms.GroupBox gbControles;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtidCliente;
+        private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label6;
