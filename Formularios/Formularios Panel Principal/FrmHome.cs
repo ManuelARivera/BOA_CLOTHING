@@ -9,15 +9,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using BOA_CLOTHING.Formularios.Formularios_Resportes;
+using BOA_CLOTHING.Entidades.SP;
+using BOA_CLOTHING.BaseDatos;
 
 namespace BOA_CLOTHING.Formularios
 {
     public partial class FrmHome : Form
     {
+        private string _usuario;
+        private int _contarM;
+        private int _contarR;
         public FrmHome()
         {
             InitializeComponent();
         }
+        public FrmHome(string usuario)
+        {
+            InitializeComponent();
+            _usuario = usuario;
+            _contarM = 0;
+            _contarR = 0;
+        }
+        
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -92,7 +105,16 @@ namespace BOA_CLOTHING.Formularios
 
         private void btnMatenimiento_Click(object sender, EventArgs e)
         {
-            panelSubmenuManteimiento.Visible = true;
+            _contarM++;
+            if (_contarM % 2 != 0)
+            {
+                panelSubmenuManteimiento.Visible = true; 
+            }
+            if (_contarM % 2 == 0)
+            {
+                panelSubmenuManteimiento.Visible = false;
+            }
+
         }
 
         private void btnM_Empleado_Click(object sender, EventArgs e)
@@ -115,19 +137,18 @@ namespace BOA_CLOTHING.Formularios
             AbrirFrmHija(new FrmMantenimientoFactura());
         } 
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            panelSubmenuManteimiento.Visible = false;
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            panelSubmenuReportes.Visible = false;
-        }
-
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            panelSubmenuReportes.Visible = true;
+            _contarR++;
+            if (_contarR % 2 != 0)
+            {
+                panelSubmenuReportes.Visible = true;
+            }
+            if (_contarR % 2 == 0)
+            {
+                panelSubmenuReportes.Visible = false;
+            }
+            
         }
 
         private void btnR_Ventas_Click(object sender, EventArgs e)
@@ -138,6 +159,21 @@ namespace BOA_CLOTHING.Formularios
         private void btnR_StockProducto_Click(object sender, EventArgs e)
         {
             AbrirFrmHija(new FrmReportesStockMercancia());
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+            if (_usuario == "Admin")
+            {
+                btnMatenimiento.Enabled = true;
+                btnReportes.Enabled = true;
+                btnEmpleados.Enabled = true;
+                btnMercancias.Enabled = true;
+            }
+
+            DataTable table = spBuscarEmpleado.OptenerDatos(_usuario);
+            lblNombre.Text = table.Rows[0][0].ToString();
+            lblPosicion.Text = table.Rows[0][1].ToString();
         }
 
     }

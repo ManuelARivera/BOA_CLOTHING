@@ -1,4 +1,5 @@
 ﻿using BOA_CLOTHING.Formularios;
+using BOA_CLOTHING.Formularios.Formularios_Resportes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace BOA_CLOTHING
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new FrmLogin());
             Application.Run(new FrmLogin());
         }
     }

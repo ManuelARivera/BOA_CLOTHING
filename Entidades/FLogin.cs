@@ -28,8 +28,9 @@ namespace BOA_CLOTHING.Entidades
 
             if (lector.Read())
             {
+                
                 SQLConnection.CerrarConexion();
-                FrmHome home = new FrmHome();
+                FrmHome home = new FrmHome(Usuario);
                 home.Show();
             }
             else 

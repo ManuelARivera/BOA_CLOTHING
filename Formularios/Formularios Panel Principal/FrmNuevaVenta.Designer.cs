@@ -51,7 +51,7 @@ namespace BOA_CLOTHING.Formularios
             this.btnVender = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblCostoApagar = new System.Windows.Forms.Label();
@@ -266,14 +266,14 @@ namespace BOA_CLOTHING.Formularios
             this.label9.TabIndex = 18;
             this.label9.Text = "Fecha:";
             // 
-            // label10
+            // lblFecha
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(631, 102);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "...";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(631, 102);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(16, 13);
+            this.lblFecha.TabIndex = 19;
+            this.lblFecha.Text = "...";
             // 
             // label11
             // 
@@ -411,7 +411,7 @@ namespace BOA_CLOTHING.Formularios
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnVender);
@@ -423,6 +423,7 @@ namespace BOA_CLOTHING.Formularios
             this.Name = "FrmNuevaVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNuevaVenta";
+            this.Load += new System.EventHandler(this.FrmNuevaVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -456,7 +457,7 @@ namespace BOA_CLOTHING.Formularios
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblCostoApagar;

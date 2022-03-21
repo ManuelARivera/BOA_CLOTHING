@@ -115,5 +115,10 @@ namespace BOA_CLOTHING.Formularios
                 lblDevolucion.Text = "$ 0.00";
             }
         }
+
+        private void FrmNuevaVenta_Load(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToShortDateString();
+        }
     }
 }

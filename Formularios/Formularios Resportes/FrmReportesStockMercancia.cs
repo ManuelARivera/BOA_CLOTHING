@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BOA_CLOTHING.Entidades.SP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,21 @@ namespace BOA_CLOTHING.Formularios.Formularios_Resportes
         public FrmReportesStockMercancia()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Filtrar(object sender, EventArgs e)
+        {
+            spFiltrar.FiltradoDatos("sp_FiltrarMercancia", "@idMercancia", txtCodigo.Text, dgvMercancia);
+        }
+
+        private void FrmReportesStockMercancia_Load(object sender, EventArgs e)
+        {
+            spMostrarGrilla.LeerGrilla("sp_MostrarMercanciaReporte", dgvMercancia);
         }
     }
 }

@@ -40,7 +40,6 @@ namespace BOA_CLOTHING.Formularios
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelSubmenuManteimiento = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.btnM_Facturas = new System.Windows.Forms.Button();
@@ -54,7 +53,6 @@ namespace BOA_CLOTHING.Formularios
             this.panel17 = new System.Windows.Forms.Panel();
             this.btnM_Empleado = new System.Windows.Forms.Button();
             this.panelSubmenuReportes = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.btnR_StockProducto = new System.Windows.Forms.Button();
@@ -87,6 +85,11 @@ namespace BOA_CLOTHING.Formularios
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPosicion = new System.Windows.Forms.Label();
             this.panelDataTime = new System.Windows.Forms.Panel();
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
@@ -98,13 +101,11 @@ namespace BOA_CLOTHING.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.MenuVertical.SuspendLayout();
             this.panelSubmenuManteimiento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel22.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panelSubmenuReportes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel28.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panelMercancias.SuspendLayout();
@@ -119,6 +120,7 @@ namespace BOA_CLOTHING.Formularios
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContenedor.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panelDataTime.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -235,7 +237,6 @@ namespace BOA_CLOTHING.Formularios
             // 
             // panelSubmenuManteimiento
             // 
-            this.panelSubmenuManteimiento.Controls.Add(this.pictureBox3);
             this.panelSubmenuManteimiento.Controls.Add(this.panel22);
             this.panelSubmenuManteimiento.Controls.Add(this.btnM_Facturas);
             this.panelSubmenuManteimiento.Controls.Add(this.panel20);
@@ -246,20 +247,9 @@ namespace BOA_CLOTHING.Formularios
             this.panelSubmenuManteimiento.Controls.Add(this.btnM_Empleado);
             this.panelSubmenuManteimiento.Location = new System.Drawing.Point(26, 346);
             this.panelSubmenuManteimiento.Name = "panelSubmenuManteimiento";
-            this.panelSubmenuManteimiento.Size = new System.Drawing.Size(163, 200);
+            this.panelSubmenuManteimiento.Size = new System.Drawing.Size(163, 156);
             this.panelSubmenuManteimiento.TabIndex = 3;
             this.panelSubmenuManteimiento.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(128, 160);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel22
             // 
@@ -399,27 +389,15 @@ namespace BOA_CLOTHING.Formularios
             // 
             // panelSubmenuReportes
             // 
-            this.panelSubmenuReportes.Controls.Add(this.pictureBox4);
             this.panelSubmenuReportes.Controls.Add(this.panel28);
             this.panelSubmenuReportes.Controls.Add(this.btnR_StockProducto);
             this.panelSubmenuReportes.Controls.Add(this.panel30);
             this.panelSubmenuReportes.Controls.Add(this.btnR_Ventas);
             this.panelSubmenuReportes.Location = new System.Drawing.Point(26, 384);
             this.panelSubmenuReportes.Name = "panelSubmenuReportes";
-            this.panelSubmenuReportes.Size = new System.Drawing.Size(163, 118);
+            this.panelSubmenuReportes.Size = new System.Drawing.Size(163, 80);
             this.panelSubmenuReportes.TabIndex = 15;
             this.panelSubmenuReportes.Visible = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(128, 79);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 14;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // panel28
             // 
@@ -540,6 +518,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnReportes
             // 
+            this.btnReportes.Enabled = false;
             this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
@@ -574,6 +553,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnMatenimiento
             // 
+            this.btnMatenimiento.Enabled = false;
             this.btnMatenimiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnMatenimiento.FlatAppearance.BorderSize = 0;
             this.btnMatenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
@@ -644,6 +624,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnEmpleados
             // 
+            this.btnEmpleados.Enabled = false;
             this.btnEmpleados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnEmpleados.FlatAppearance.BorderSize = 0;
             this.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
@@ -714,6 +695,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             // btnMercancias
             // 
+            this.btnMercancias.Enabled = false;
             this.btnMercancias.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnMercancias.FlatAppearance.BorderSize = 0;
             this.btnMercancias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(114)))));
@@ -778,13 +760,74 @@ namespace BOA_CLOTHING.Formularios
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.panelContenedor.Controls.Add(this.groupBox1);
             this.panelContenedor.Controls.Add(this.panelDataTime);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelContenedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.panelContenedor.Location = new System.Drawing.Point(220, 35);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1080, 615);
             this.panelContenedor.TabIndex = 2;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblNombre);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblPosicion);
+            this.groupBox1.Location = new System.Drawing.Point(815, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(262, 81);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Login On";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(6, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nombre:";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.Black;
+            this.lblNombre.Location = new System.Drawing.Point(84, 28);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(20, 16);
+            this.lblNombre.TabIndex = 6;
+            this.lblNombre.Text = "...";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(6, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Posicion:";
+            // 
+            // lblPosicion
+            // 
+            this.lblPosicion.AutoSize = true;
+            this.lblPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosicion.ForeColor = System.Drawing.Color.Black;
+            this.lblPosicion.Location = new System.Drawing.Point(84, 57);
+            this.lblPosicion.Name = "lblPosicion";
+            this.lblPosicion.Size = new System.Drawing.Size(20, 16);
+            this.lblPosicion.TabIndex = 5;
+            this.lblPosicion.Text = "...";
             // 
             // panelDataTime
             // 
@@ -799,6 +842,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             this.lbFecha.AutoSize = true;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.ForeColor = System.Drawing.Color.Black;
             this.lbFecha.Location = new System.Drawing.Point(59, 110);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.Size = new System.Drawing.Size(126, 46);
@@ -809,7 +853,7 @@ namespace BOA_CLOTHING.Formularios
             // 
             this.lbHora.AutoSize = true;
             this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.lbHora.ForeColor = System.Drawing.Color.Black;
             this.lbHora.Location = new System.Drawing.Point(63, 19);
             this.lbHora.Name = "lbHora";
             this.lbHora.Size = new System.Drawing.Size(249, 91);
@@ -839,13 +883,11 @@ namespace BOA_CLOTHING.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             this.panelSubmenuManteimiento.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel22.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panelSubmenuReportes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel28.ResumeLayout(false);
             this.panel30.ResumeLayout(false);
             this.panelMercancias.ResumeLayout(false);
@@ -860,6 +902,8 @@ namespace BOA_CLOTHING.Formularios
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelContenedor.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panelDataTime.ResumeLayout(false);
             this.panelDataTime.PerformLayout();
             this.ResumeLayout(false);
@@ -925,8 +969,11 @@ namespace BOA_CLOTHING.Formularios
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Button btnR_Ventas;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblPosicion;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

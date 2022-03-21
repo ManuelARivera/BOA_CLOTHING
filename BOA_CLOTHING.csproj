@@ -54,6 +54,7 @@
     <Compile Include="Entidades\Mercancia.cs" />
     <Compile Include="Entidades\Persona.cs" />
     <Compile Include="Entidades\SP\spActualizar.cs" />
+    <Compile Include="Entidades\SP\spBuscarEmpleado.cs" />
     <Compile Include="Entidades\SP\spBuscarMercancia.cs" />
     <Compile Include="Entidades\SP\spEliminar.cs" />
     <Compile Include="Entidades\SP\spFiltrar.cs" />
@@ -179,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Formularios Panel Principal\FrmNuevaVenta.resx">
       <DependentUpon>FrmNuevaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios Resportes\FrmReportesStockMercancia.resx">
+      <DependentUpon>FrmReportesStockMercancia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
