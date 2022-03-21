@@ -124,10 +124,5 @@ namespace BOA_CLOTHING.Formularios
         {
             Limpiar.Limpia(gbControles);
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

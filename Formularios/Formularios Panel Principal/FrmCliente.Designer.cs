@@ -137,7 +137,7 @@ namespace BOA_CLOTHING.Formularios
             this.txtCedula.Location = new System.Drawing.Point(73, 78);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(186, 20);
-            this.txtCedula.TabIndex = 2;
+            this.txtCedula.TabIndex = 6;
             this.txtCedula.TextChanged += new System.EventHandler(this.txtidCliente_TextChanged);
             // 
             // label2
@@ -155,7 +155,7 @@ namespace BOA_CLOTHING.Formularios
             this.txtNombre.Location = new System.Drawing.Point(73, 26);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(186, 20);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label6
@@ -173,7 +173,7 @@ namespace BOA_CLOTHING.Formularios
             this.txtApellido.Location = new System.Drawing.Point(73, 52);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(186, 20);
-            this.txtApellido.TabIndex = 6;
+            this.txtApellido.TabIndex = 4;
             this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             // 
             // btnCrear

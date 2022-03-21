@@ -1,14 +1,16 @@
-﻿using BOA_CLOTHING.Entidades;
+﻿using BOA_CLOTHING.BaseDatos;
+using BOA_CLOTHING.Entidades;
 using BOA_CLOTHING.Entidades.SP;
+using System.Windows.Forms;
+using System.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace BOA_CLOTHING.Formularios
 {
@@ -24,9 +26,6 @@ namespace BOA_CLOTHING.Formularios
             _resultado = 0;
             _cantidad = 0;
         }
-
-
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Close();
@@ -72,6 +71,7 @@ namespace BOA_CLOTHING.Formularios
             Mercancia mercancia = new Mercancia();
             mercancia.Codigo = txtCodigo.Text;
             mercancia.Stock = _resultado;
+            SQLConnection.CerrarConexion();
        
             int num = spActualizar.ActualizarCompra("sp_ActualizarMercanciaCompra", mercancia);
 
