@@ -28,6 +28,17 @@ namespace BOA_CLOTHING.Entidades.SP
 
             return cmd.ExecuteNonQuery();
         }
+        public static int ActualizarCompra(string Nombreprocedure, Mercancia mercancia)
+        {
+            SQLConnection.AbrirConexion();
+
+            SqlCommand cmd = new SqlCommand(Nombreprocedure, cn.Conexion());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Codigo", mercancia.Codigo);
+            cmd.Parameters.AddWithValue("@NewStock", mercancia.Stock);
+            return cmd.ExecuteNonQuery();
+        }
         public static int Actualizar(string Nombreprocedure, Empleado empleado)
         {
             SQLConnection.AbrirConexion();
@@ -61,5 +72,6 @@ namespace BOA_CLOTHING.Entidades.SP
 
             return cmd.ExecuteNonQuery();
         }
+
     }
 }

@@ -25,5 +25,18 @@ namespace BOA_CLOTHING.Entidades.SP
             sad.Fill(tabla);
             return tabla;
         }
+        public static DataTable OptenerDatosCompra(string id)
+        {
+
+            SqlCommand cmd = new SqlCommand("sp_BuscarCompraMercancia", cn.Conexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Codigo", id);
+
+            SqlDataAdapter sad = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+
+            sad.Fill(tabla);
+            return tabla;
+        }
     }
 }
